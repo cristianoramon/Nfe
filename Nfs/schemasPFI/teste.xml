@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PFI xmlns="http://www.portalfiscal.inf.br/pfi" xmlns:nfe="http://www.portalfiscal.inf.br/nfe" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.portalfiscal.inf.br/pfi
+pfi.xsd" TLayout="PFI" versao="1.01">
+	<dadosEmissor>
+		<tpEmi>C</tpEmi>
+		<CPF>12345678910</CPF>
+		<UF>AL</UF>
+		<repEmi>123</repEmi>
+		<CNPJ>01234567000111</CNPJ>
+		<xNome>Usina de Cana de Acúcar SA</xNome>
+	</dadosEmissor>
+	<transp>
+		<transporta>
+			<CNPJ>98765432000110</CNPJ>
+			<xNome>TRANSPORTADORA PAPALEGUAS</xNome>
+			<UF>AL</UF>
+		</transporta>
+		<condutor>
+			<CPF>98765432100</CPF>
+			<xNome>FULANO DE TAL</xNome>
+		</condutor>
+		<tpTransp>1</tpTransp>
+		<veicTransp>
+			<nfe:placa>ABC1234</nfe:placa>
+			<nfe:UF>AL</nfe:UF>
+		</veicTransp>
+		<reboque>
+			<nfe:placa>ABC5678</nfe:placa>
+			<nfe:UF>AL</nfe:UF>
+		</reboque>
+	</transp>
+	<dadosNFs>
+		<nfe:infNFe Id="ID001" versao="1.07">
+			<nfe:ide>
+				<nfe:nNF>1000</nfe:nNF>
+				<nfe:dEmi>2006-10-09</nfe:dEmi>
+			</nfe:ide>
+			<nfe:emit>
+				<nfe:CNPJ>12345678000110</nfe:CNPJ>
+				<nfe:xNome>USINA TABAJARA S/A</nfe:xNome>
+				<nfe:UF>AL</nfe:UF>
+			</nfe:emit>
+			<nfe:dest>
+				<nfe:CNPJ>45876123000199</nfe:CNPJ>
+				<nfe:xNome>POSTO TABAJARA LTDA</nfe:xNome>
+				<nfe:UF>SE</nfe:UF>
+			</nfe:dest>
+			<nfe:det nItem="1">
+				<nfe:prod>
+					<nfe:xProd>Produto 1</nfe:xProd>
+					<nfe:NCM>12345678</nfe:NCM>
+					<nfe:uTrib>Litro</nfe:uTrib>
+					<nfe:qTrib>1000</nfe:qTrib>
+					<nfe:vProd>1000.00</nfe:vProd>
+				</nfe:prod>
+				<nfe:vol>
+					<nfe:pesoB>1000.345</nfe:pesoB>
+				</nfe:vol>
+			</nfe:det>
+			<nfe:det nItem="2">
+				<nfe:prod>
+					<nfe:xProd>Produto 2</nfe:xProd>
+					<nfe:NCM>87654321</nfe:NCM>
+					<nfe:uTrib>Metro</nfe:uTrib>
+					<nfe:qTrib>100</nfe:qTrib>
+					<nfe:vProd>10000.00</nfe:vProd>
+				</nfe:prod>
+			</nfe:det>
+		</nfe:infNFe>
+		<nfe:infNFe Id="ID002" versao="1.07">
+			<nfe:ide>
+				<nfe:nNF>1001</nfe:nNF>
+				<nfe:dEmi>2006-10-09</nfe:dEmi>
+			</nfe:ide>
+			<nfe:emit>
+				<nfe:CNPJ>12345678000110</nfe:CNPJ>
+				<nfe:xNome>USINA TABAJARA S/A</nfe:xNome>
+				<nfe:UF>SE</nfe:UF>
+			</nfe:emit>
+			<nfe:dest>
+				<nfe:CNPJ>45876123000199</nfe:CNPJ>
+				<nfe:xNome>POSTO BR LTDA</nfe:xNome>
+				<nfe:UF>SE</nfe:UF>
+			</nfe:dest>
+			<nfe:det nItem="1">
+				<nfe:prod>
+					<nfe:xProd>Produto 1</nfe:xProd>
+					<nfe:NCM>12345678</nfe:NCM>
+					<nfe:uTrib>Litro</nfe:uTrib>
+					<nfe:qTrib>1000</nfe:qTrib>
+					<nfe:vProd>1000.00</nfe:vProd>
+				</nfe:prod>
+				<nfe:vol>
+					<nfe:pesoB>1000.345</nfe:pesoB>
+				</nfe:vol>
+			</nfe:det>
+			<nfe:det nItem="2">
+				<nfe:prod>
+					<nfe:xProd>Produto 2</nfe:xProd>
+					<nfe:NCM>87654321</nfe:NCM>
+					<nfe:uTrib>Litro</nfe:uTrib>
+					<nfe:qTrib>100</nfe:qTrib>
+					<nfe:vProd>10000.00</nfe:vProd>
+				</nfe:prod>
+			</nfe:det>
+		</nfe:infNFe>
+	</dadosNFs>
+</PFI>

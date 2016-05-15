@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Erro" targetNamespace="http://www.portalfiscal.inf.br/passefiscal/ws/Erro.xsd" elementFormDefault="qualified" xmlns="http://www.portalfiscal.inf.br/passefiscal/ws/Erro.xsd" xmlns:mstns="http://www.portalfiscal.inf.br/passefiscal/ws/Erro.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+  <xs:complexType name="erroType">
+    <xs:sequence>
+      <xs:element name="codErro" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="msgErro" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="errosType">
+    <xs:sequence>
+      <xs:sequence>
+        <xs:element name="Erro" type="erroType" minOccurs="1" maxOccurs="256" />
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Erros" type="errosType" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ptc="http://www.portalfiscal.inf.br/ptc" targetNamespace="http://www.portalfiscal.inf.br/ptc" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="dadosPTC.xsd"/>
+	<xs:element name="PTC" type="ptc:TPTC">
+		<xs:annotation>
+			<xs:documentation>Protocolo de Transporte de Carga (PTC) do sistema de Compartilhamento Lógico de informações de trânsito de mercadorias</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

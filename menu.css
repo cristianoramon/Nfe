@@ -1,0 +1,4 @@
+/* CSS Document */
+  #menu a:link {font-weight: bold; color: #00ffff; text-decoration: none; background-color: transparent; display: block;}
+  #menu a:visited {font-weight: bold; color: #00ffff; text-decoration: none; background-color: transparent; display: block;}
+  #menu a:hover {font-weight: bold; color: black; text-decoration: none; background-color: #ffffcc; display: block;}

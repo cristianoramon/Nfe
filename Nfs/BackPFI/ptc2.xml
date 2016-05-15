@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PTC  TLayout="String" versao="1.01">
+	<chPTC>000000000000000000000000000000</chPTC>
+	<dEmi>1967-08-13</dEmi>
+	<hEmi>14:20:0Z</hEmi>
+	<dadosFisco id="dadosEmitente">
+		<CPF>00000000000</CPF>
+		<UF>AC</UF>
+		<repEmi>String</repEmi>
+	</dadosFisco>
+	<CFOP>1101</CFOP>
+	<transp>
+		<transporta id="transportadora">
+			<CNPJ>00000000000000</CNPJ>
+			<xNome>String</xNome>
+			<UF>AC</UF>
+		</transporta>
+		<condutor id="motorista">
+			<CPF>00000000000</CPF>
+			<xNome>String</xNome>
+		</condutor>
+		<tpTransp>1</tpTransp>
+		<veicTransp id="veiculo">
+			<placa>A</placa>
+			<UF>AC</UF>
+		</veicTransp>
+		<reboque id="reboque1">
+			<placa>A</placa>
+			<UF>AC</UF>
+		</reboque>
+		<reboqueSec id="reboque2">
+			<placa>A</placa>
+			<UF>AC</UF>
+		</reboqueSec>
+		<obs>String</obs>
+	</transp>
+	<dadosNFs >
+	<infNFe>
+		<ide id="nota">
+			<cUF>11</cUF>
+			<nNF>10</nNF>
+			<dEmi>1967-08-13</dEmi>
+		</ide>
+		<emit id="emitente">
+			<CNPJ>00000000000000</CNPJ>
+			<xNome>String</xNome>
+			<UF>AC</UF>
+		</emit>
+		<dest id="destinatario">
+			<CNPJ>00000000000000</CNPJ>
+			<xNome>String</xNome>
+			<UF>AC</UF>
+		</dest>
+		<total id="total">
+			<ICMSTot>
+				<vBC>0</vBC>
+				<vICMS>0</vICMS>
+				<vBCST>0</vBCST>
+				<vST>0</vST>
+				<vProd>0</vProd>
+			</ICMSTot>
+		</total>
+	</infNFe>
+	</dadosNFs>
+
+</PTC>

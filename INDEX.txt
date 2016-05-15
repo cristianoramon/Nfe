@@ -1,0 +1,139 @@
+CRIANCAO DE INDEX 
+
+ TABELA IBGE
+ COLUNA    cod_municipio
+
+ TABELA PROD_EMPRESA
+ COLUNA    codprod,posicao
+
+
+
+CAMPO
+ TABELA NDO
+ COLUNO CFOP_FORA_ESTADO 
+        TIPO_NF  
+
+alter table NDO add TIPO_NF varchar2(1);
+
+
+CRIACAO DA TABELA
+
+-- Create table
+create table T_TMP_NFE_SAIDA
+(
+  SERIE       VARCHAR2(5),
+  FILIAL      VARCHAR2(5),
+  CODPRODUTO  VARCHAR2(10),
+  QTDE        NUMBER,
+  CODDEPOSITO VARCHAR2(5),
+  PEDIDO      VARCHAR2(20)
+)
+
+alter table ITENS_PEDIDO_VENDA add CBTMAE varchar2(4)
+
+-- Create table
+create table T_CST_IPI
+(
+  COD_IPI VARCHAR2(4) not null,
+  DSC_IPI VARCHAR2(100)
+)
+tablespace DADOSPIR
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table T_CST_IPI
+  add constraint PK_CST_IPI primary key (COD_IPI)
+  using index 
+  tablespace DADOSPIR
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+-- Create table
+create table T_CST_PIS
+(
+  cod_pis nvarchar2(4),
+  dsc_pis varchar2(100)
+)
+;
+
+-- Create table
+create table T_CST_COFINS
+(
+  COD_COFINS VARCHAR2(4) not null,
+  DSC_COFINS VARCHAR2(100)
+)
+tablespace DADOSPIR
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+
+alter table T_CST_COFINS
+  add constraint PK_CST_COFINS primary key (COD_COFINS)
+  using index 
+  tablespace DADOSPIR
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table T_CST_PIS
+  add constraint pk_cst_pis primary key (COD_PIS);
+
+-- Create table
+create table T_TIPO_NF
+(
+  COD_TIPO_NF number,
+  DSC_TIPO    varchar2(50)
+)
+
+alter table PEDIDO_VENDA add NR_MAE varchar2(9);
+
+OPERACAO
+ 
+  COD_PIS         VARCHAR2(4),
+  COD_COFINS      VARCHAR2(4),
+  COD_IPI         VARCHAR2(4)
+
+Problema na visualizacao do pedio
+  
+ => Ndo sem o campo cfop_fora_estado 
+
+ => As formulas precisa apresentar espaço em branco entre elas
+
+ => O Usuario precisa estar associado ao deposito
+
+ => É precisa da regra de exceção  
+
+
+Problema na visualizcao do Item do pedido
+
+   O cliente não tem regra de execessao
+   

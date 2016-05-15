@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by Administrador (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Root">
+		<xs:annotation>
+			<xs:documentation>Sql para autorização da Nota</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Sql">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Select">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SelCo1" type="xs:string"/>
+										<xs:element name="SelCo2" type="xs:string"/>
+										<xs:element name="SelCo3" type="xs:string"/>
+										<xs:element name="SelFrom">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SelFromTab1" type="xs:string"/>
+													<xs:element name="SelFromTab2" type="xs:string"/>
+													<xs:element name="SelFromTab3" type="xs:string"/>
+													<xs:element name="SelFromTab4" type="xs:string"/>
+													<xs:element name="SelFromTab5" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="SelWhere">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SelWhereCond1" type="xs:string"/>
+													<xs:element name="SelWhereCond2" type="xs:string"/>
+													<xs:element name="SelWhereCond3" type="xs:string"/>
+													<xs:element name="SelWhereCond4" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<livros version="1.1">
+	<item id="0001"> 
+		<titulo>PHP 5</titulo>
+		<autor>Walace Soares</autor>
+		<editora>Erica</editora>
+		<data>Setembro/2004</data>
+		<paginas>700</paginas>
+	</item>
+	<item id="0002"> 
+		<titulo>Crie um site B2c com PHP4 e MySQL</titulo>
+		<autor>Walace Soares</autor>
+		<editora>Erica</editora>
+		<data>Julho/2001</data>
+		<paginas>620</paginas>
+		<isbn>8571947740</isbn>
+	</item>
+</livros>
+ 

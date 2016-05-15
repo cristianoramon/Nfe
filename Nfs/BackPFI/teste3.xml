@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<NFs>
+		<NF>
+			<dadosFisco>
+				<cpfEmitente/>
+				<pfEmitente/>
+			</dadosFisco>
+			<ide>
+				<nNF/>
+				<dEmi/>
+				<pesoL/>
+				<emit>
+					<cpfCnpj/>
+					<xNome/>
+					<UF/>
+				</emit>
+				<dest>
+					<CNPJ/>
+					<xNome/>
+					<UF/>
+				</dest>
+			</ide>
+			<det>
+				<prod>
+					<NCM/>
+					<qTrib/>
+					<codUnMed/>
+					<vProd/>
+				</prod>
+			</det>
+			<transp>
+				<transporta id="fisco">
+					<cpfCnpj/>
+					<xNome/>
+					<UF/>
+				</transporta>
+				<motorista>
+					<cpf/>
+					<xNome/>
+				</motorista>
+				<veic>
+					<placaPrincipal/>
+					<ufPlacaPrincipal/>
+					<placaSecundaria/>
+					<ufPlacaSecundaria/>
+					<placaTerceira/>
+					<ufPlacaTerceira/>
+				</veic>
+			</transp>
+		</NF>
+	</NFs>
+</root>

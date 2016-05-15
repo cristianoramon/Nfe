@@ -1,0 +1,30 @@
+ALTERACAO DA NFE
+   => GerarNfSaida.php (04/04/2008)
+   => AjudaPedido.php (04/04/2008)
+   => AtualNotaV2.php (07/04/2008)
+   => cGeraPasseNf.php (08/04/2008)
+   => RelNfDanf.php (07/04/2008)
+   => AjudaPedido.php(07/04/2008)
+   => GerarNfSaida.php(07/04/2008)
+   => AjudaItemPedido.php(07/04/2008)
+   => confRelDanfe1.xml(07/04/2008)
+   => iGravaNFSaidaV3 (07/04/2008)
+   => fCalculaNota (07/04/2008)
+   => iGerarTitulo(08/04/2008)
+
+Aplicacao
+ 07/04/2008
+   => Tela foi retirado alguns campos desnecessario
+   => Reboque secundario adicionando
+   => Duplicatas a receber foi adicionado
+     
+
+==============================================
+criacao da Sequencia 07/04/2008
+create sequence SEQ_NFE
+minvalue 1
+maxvalue 99999999999999999999999
+start with 21
+increment by 1
+cache 20
+==============================================

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nfe="http://www.portalfiscal.inf.br/nfe" xmlns:pfi="http://www.portalfiscal.inf.br/pfi" targetNamespace="http://www.portalfiscal.inf.br/pfi" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.portalfiscal.inf.br/nfe" schemaLocation="nfePFI_v1.07.xsd"/>
+	<xs:complexType name="TPFI">
+		<xs:annotation>
+			<xs:documentation>Tipo Dados do PFI - Passe Fiscal Interestadual</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="chPFI" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tipo Chave do PFI</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{30}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dEmi" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Data de emissão do PFI (AAAA-MM-DD)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hEmi" type="xs:time">
+				<xs:annotation>
+					<xs:documentation>Hora de emissão do PFI (HH:MM:SS)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dadosFisco" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identificação do Fisco Emitente</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CPF" type="nfe:TCpf">
+							<xs:annotation>
+								<xs:documentation>CPF do agente</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="UF" type="nfe:TUf">
+							<xs:annotation>
+								<xs:documentation>Sigla da Unidade da Federação</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="repEmi">
+							<xs:annotation>
+								<xs:documentation>Repartição Fiscal emitente</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:whiteSpace value="collapse"/>
+									<xs:maxLength value="60"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="transp">
+				<xs:annotation>
+					<xs:documentation>Dados dos transportes da NF-e</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="transporta" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Dados do transportador</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:choice minOccurs="0">
+										<xs:element name="CNPJ" type="nfe:TCnpj">
+											<xs:annotation>
+												<xs:documentation>CNPJ do transportador</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="CPF" type="nfe:TCpf">
+											<xs:annotation>
+												<xs:documentation>CPF do transportador</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:choice>
+									<xs:element name="xNome" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Razão Social ou nome</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="60"/>
+												<xs:minLength value="1"/>
+												<xs:whiteSpace value="collapse"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="UF" type="nfe:TUf">
+										<xs:annotation>
+											<xs:documentation>Sigla da UF</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="condutor" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Dados do condutor do veículo</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CPF" type="nfe:TCpf">
+										<xs:annotation>
+											<xs:documentation>CPF do transportador</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="xNome" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Nome</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="60"/>
+												<xs:minLength value="1"/>
+												<xs:whiteSpace value="collapse"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="tpTransp">
+							<xs:annotation>
+								<xs:documentation>Tipo do transporte(1 - terrestre; 2 - avião; 3 - aquático; 4 - ferroviário)</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:unsignedByte">
+									<xs:enumeration value="1"/>
+									<xs:enumeration value="2"/>
+									<xs:enumeration value="3"/>
+									<xs:enumeration value="4"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="veicTransp" type="nfe:TVeiculo">
+							<xs:annotation>
+								<xs:documentation>Dados do veículo</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="reboque" type="nfe:TVeiculo" minOccurs="0" maxOccurs="2">
+							<xs:annotation>
+								<xs:documentation>Dados do reboque</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="reboqueSec" type="nfe:TVeiculo" minOccurs="0" maxOccurs="2">
+							<xs:annotation>
+								<xs:documentation>Dados do segundo reboque</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="obs" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Para ser utilizado no caso de transportes não terrestres</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dadosNFs" type="nfe:TNFe" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Dados das Notas Fiscais</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="versao" use="required" fixed="1.01">
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal">
+					<xs:totalDigits value="4"/>
+					<xs:fractionDigits value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="TLayout" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:schema>

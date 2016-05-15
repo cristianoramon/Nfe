@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.portalfiscal.inf.br/passefiscal/ws/Erro.xsd">
+  <Erros>
+    <Erro>
+      <msgErro>Could not find schema information for the element 'http://www.portalfiscal.inf.br/passefiscal/ws/SolicitacaoPasseFiscal.xsd:ufPlacaPrincipal'. An error occurred at file:///C:/projetos/SCIMTxSP/TMPSolicitacaoPF.xml, (100, 12).</msgErro>
+    </Erro>
+  </Erros>
+</root>

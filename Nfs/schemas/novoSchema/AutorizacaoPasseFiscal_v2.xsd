@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pfi="http://www.portalfiscal.inf.br/pfi" targetNamespace="http://www.portalfiscal.inf.br/pfi" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="dadosPFI.xsd"/>
+	<xs:element name="AutPFI">
+		<xs:annotation>
+			<xs:documentation>Autorização do Passe Fiscal Interestadual (PFI) do sistema de Controle Interestadual de Mercadorias em Trânsito</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="chPFI">
+					<xs:annotation>
+						<xs:documentation>Tipo Chave do PFI</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]{2}[0-9]{6}[/]{1}[0-9]{4}[\-]{1}[0-9]{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="codBarPFI">
+					<xs:annotation>
+						<xs:documentation>Linha Digitável do Código de Barras do PFI</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]{15}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="dEmi" type="xs:date">
+					<xs:annotation>
+						<xs:documentation>Data de emissão do PFI (AAAA-MM-DD)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="hEmi" type="xs:time">
+					<xs:annotation>
+						<xs:documentation>Hora de emissão do PFI (HH:MM:SS)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="xRepEmi">
+					<xs:annotation>
+						<xs:documentation>Nome da repartição fiscal emitente</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+							<xs:minLength value="1"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="nMatResp">
+					<xs:annotation>
+						<xs:documentation>Número da matrícula do responsável pela emissão</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="12"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="xResp">
+					<xs:annotation>
+						<xs:documentation>Nome do responsável pela emissão</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+							<xs:minLength value="1"/>
+							<xs:whiteSpace value="collapse"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PFI" type="pfi:TPFI">
+					<xs:annotation>
+						<xs:documentation>Passe Fiscal Interestadual (PFI) do sistema de Controle Interestadual de Mercadorias em Trânsito</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="versao" use="required" fixed="1.02">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+						<xs:totalDigits value="4"/>
+						<xs:fractionDigits value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="TLayout" type="xs:string" use="required" fixed="PFI"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

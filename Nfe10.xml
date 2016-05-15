@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<enviNFe id="lote" xmlns="http://www.portalfiscal.inf.br/nfe"  versao="1.10">
+<idLote>5</idLote>
+<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+	<infNFe Id="ID000000" versao="1.10">
+		<ide id="nfe">
+				<cUF>27</cUF>
+				<cNF>000000000</cNF>
+				<natOp>token</natOp>
+				<indPag>2</indPag>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>10</nNF>
+				<dEmi>0000-00-00</dEmi>
+				<dSaiEnt>0000-00-00</dSaiEnt>
+				<tpNF>1</tpNF>
+				<cMunFG>2704302</cMunFG>
+			
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>0</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<procEmi>0</procEmi>
+				<verProc>0.1</verProc>
+		</ide>
+		<emit id="emitente">
+			<CNPJ>00000000000000</CNPJ>
+			<xNome>String</xNome>
+			<enderEmit id="endEmitente">
+				<xLgr>String</xLgr>
+				<nro>String</nro>
+				<xBairro>String</xBairro>
+				<cMun>2704302</cMun>
+				<xMun>String</xMun>
+				<UF>AC</UF>	
+			</enderEmit>
+			<IE>String</IE>
+		</emit>
+
+		
+
+	
+	</infNFe>
+
+</NFe>
+</enviNFe>

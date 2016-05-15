@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://www.portalfiscal.inf.br/passefiscal/ws/AutorizacaoPasseFiscal.xsd">
+  <PF>
+    <NFs>
+      <idNF>
+        <nroNota>564745754</nroNota>
+        <cpfCnpjEmitente>34028316313829</cpfCnpjEmitente>
+      </idNF>
+    </NFs>
+    <numero>SP000065/2006-59</numero>
+    <linhaDig>230000652006599</linhaDig>
+    <data>25/9/2006</data>
+    <hora>11:16:00</hora>
+  </PF>
+</root>

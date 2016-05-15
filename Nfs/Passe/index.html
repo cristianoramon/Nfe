@@ -1,0 +1,379 @@
+<!--web53407-->
+
+
+<html>
+<head>
+<title>
+Yahoo! Mail</title>
+<script type="text/javascript">
+<!-- 
+	if(typeof top.frames["wmailmain"] != "undefined") window.open("http://mail.yahoo.com", "_top");
+// -->
+</script>
+
+<noscript>
+<META HTTP-EQUIV=Refresh CONTENT="0; URL=/ym/login?nojs=1">
+</noscript>
+
+
+
+        
+
+
+
+
+
+
+    
+    
+<link rel="stylesheet" href="http://us.js2.yimg.com/us.js.yimg.com/lib/pim/r/medici/14_6/mail/us/mail_blue_all.css" type="text/css" media="all">
+
+
+<script type="text/javascript" src="http://us.js2.yimg.com/us.js.yimg.com/lib/pim/r/medici/14_6/mail/mailcommonlib.js"></script>
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    function Help(link)
+    {
+		window.open(link,"help","width=400,height=500,scrollbars=yes,dependent=yes");
+    }
+
+    if(document.cookie != "" && document.cookie.indexOf("") == -1) 
+    {
+	window.open("http://mail.yahoo.com", "_top");
+    }
+
+    var newWin=null;
+    var onscreen=false;
+
+    function NewWin(url,name,xpos,ypos,width,height)
+    {
+       newWin=window.open(
+           url,
+           name,
+           "screenX="+xpos+",screenY="+ypos+",WIDTH="+width+",HEIGHT="+height+ 
+           ",location=0,resizable=1,status=0,titlebar=1,directories=0,toolbar=0,menubar=0,scrollbars=0,status=0"
+       );
+       newWin.focus();
+       onscreen=true; 
+    }
+
+</script>
+
+<div id="universalheader"> 
+<style type="text/css">
+<!-- @import url("http://us.js1.yimg.com/us.yimg.com/lib/hdr/ygma5.css");body{margin:0px 4px;} -->
+</style>
+<div align=center id=ygma>
+<form name=yhdr_form style="margin:0"  action="http://srd.yahoo.com/fp=150500001&loc=head&st=yahoo/*http://search.yahoo.com/search"  target=_blank>
+
+<input type=hidden name="fr" value="ush1-us-mail">
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+<tr bgcolor="#efefef">
+<td id=ygmalinks class=ygmabk width="100%" colspan=3>
+<font face="arial,helvetica,sans-serif" size="-2">
+<a target="_top" href="http://www.yahoo.com" ><font color=#000000>Yahoo!</font></a> &nbsp; 
+<a target="_top" href="http://us.rd.yahoo.com/mail_us/myref/pimnav/others/?http://my.yahoo.com"><font color=#000000>My Yahoo!</font></a> &nbsp;
+<a href="http://mail.yahoo.com" target="_top" ><font color=#000000>Mail</font></a> 
+</font>
+</td>
+<td class=ygmatcrn><spacer type=block width=1 height=1></td>
+<td class=ygmabk rowspan=2>
+<img src=http://us.i1.yimg.com/us.yimg.com/i/us/nt/hdr/stw.gif width=34 height=17 border=0 hspace=4 alt='Search the web'>
+</td>
+<td id=ygmasearch class=ygmabk rowspan=2 nowrap>
+<font face="verdana,geneva,sans-serif" size="-2">
+<input type=text name=p size=12 title='Enter search terms here' maxlength=100>
+<input class=ygbt type=submit value='Search' title=Search>
+</font>
+</td>
+</tr>
+<tr>
+<td rowspan=2 valign=top>
+<a href="http://mail.yahoo.com/"><img id=ygmalogo border=0 src="http://us.i1.yimg.com/us.yimg.com/i/us/nt/ma/ma_mail_1.gif" width=196 height=33 border=0 alt="Yahoo! Mail"></a>
+</td>
+<td id=ygmagreet width="100%" rowspan=2>
+<font face="verdana,geneva,sans-serif" size=-2>
+			Welcome, <strong>
+</strong>
+ <br> 			[<a href="/ym/Logout?YY=99114&YY=99114" target="_top">Sign Out</a>,
+<a href="http://edit.yahoo.com/config/eval_profile?.src=ym&.intl=&.done=http://mail.yahoo.com/&.src=ym" target="_top"> My Account</a>]<br>
+</font>
+</td>
+<td rowspan=2>
+
+</td>
+<td class=ygmacrn width=13 height=14 valign=top nowrap><spacer type=block width=13 height=14></td>
+</tr>
+<tr>
+<td colspan=3 align=right id=ygmaproplinks>
+<font face="verdana,geneva,sans-serif" size="-2">
+<a href="http://mail.yahoo.com/" target="_top">Mail Home</a> -
+ 
+<a target="_top" href="http://us.rd.yahoo.com/mail_us/help/?http://help.yahoo.com/help/us/mail"> 
+ 
+Help</a>
+
+</font>
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+</div>
+
+<script>
+    var oKey = new ylib_keyevt();
+    oKey.addKey(67,-1,"location='http://mail.yahoo.com/ym/ShowFolder?rb=Inbox&YY=99114&YN=1'","shift+ctrl"); // Check Mail | CTRL-C
+    try
+    {
+    if( parent.showCompose )
+        oKey.addKey(80,-1,"try {parent.showCompose();} catch(e) {location='http://mail.yahoo.com/ym/Compose?YY=99114';}","shift+ctrl"); // Compose | CTRL-P
+    else
+        oKey.addKey(80,-1,"location='http://mail.yahoo.com/ym/Compose?YY=99114'","shift+ctrl"); // Compose | CTRL-P
+    }
+    catch(error)
+    {
+        oKey.addKey(80,-1,"location='http://mail.yahoo.com/ym/Compose?YY=99114'","shift+ctrl"); // Compose | CTRL-P
+    }
+
+    oKey.addKey(70,-1,"location='http://mail.yahoo.com/ym/Folders?YY=99114'","shift+ctrl"); // Folders | CTRL-F
+    oKey.addKey(83,-1,"location='http://mail.yahoo.com/ym/Search?P=1&YY=99114'","shift+ctrl"); // Search | CTRL-S
+        oKey.addKey(72,-1,"location='http://help.yahoo.com/help/us/mail'","shift+ctrl"); // Help | CTRL-H
+    </script>
+
+<script language=javascript>
+
+    function init() 
+    { 
+		if(document.getElementById)
+		{
+			Tabs_Init();
+			LeftNav('popaccounts');
+			LeftNav('mailaccounts');
+			LeftNav('folderlist');
+			LeftNav('searchnav');
+			LeftNav('optionsnav');
+            LeftNav('savedsearches');
+			
+	    	document.onkeydown = function(evt) { oKey.keyevent(evt); }
+			if(typeof OnLoad != 'undefined') OnLoad();
+		}
+    }
+
+    onload=init
+
+</script>
+
+
+
+
+<div id="topnav">
+	<div>
+	        <span id="mailtab" class="first selected"><span><a target="_top" href="http://us.rd.yahoo.com/mail_us/pimnav/mail/*http://mail.yahoo.com/ym/welcome?YY=99114">Mail</a><a href="#mailshortcuts" class="jump"> <img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/bt_dd_l_2.gif" alt="Mail shortcuts"></a><span>| </span></span></span>
+
+		
+                <span id="addressbooktab"><span><a target="_top" href="http://us.rd.yahoo.com/mail_us/pimnav/ab/*http://address.mail.yahoo.com">Addresses</a><a target="_top" href="#addressbookshortcuts" class="jump"> <img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/bt_dd_2.gif" alt="Address Book shortcuts"></a><span>| </span></span></span>
+                 
+               
+		        <span id="calendartab"><span><a target="_top" href="http://us.rd.yahoo.com/mail_us/pimnav/cal/*http://calendar.mail.yahoo.com">Calendar</a><a target="_top" href="#calendarshortcuts" class="jump"> <img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/bt_dd_2.gif" alt="Calendar shortcuts"></a><span>| </span></span></span>   
+                    
+
+                 <span id="notepadtab"><span><a target="_top" href="http://us.rd.yahoo.com/mail_us/pimnav/np/*http://notepad.mail.yahoo.com">Notepad</a><a target="_top" href="#notepadshortcuts" class="jump"> <img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/bt_dd_2.gif" alt="Notepad shortcuts"></a></span></span>
+                
+       
+				<span class="last" id="searchtestopionlinks">
+	  	    	    		
+	                	            	            	            	    	    	
+
+									<a id="MailUpgradesLink" href="http://us.rd.yahoo.com/mail_us/nav/?http://billing.mail.yahoo.com/bm/Upgrades" target="_blank" title="Navigate to the Mail Upgrades page" style="text-decoration:underline;">Upgrades</a> - 
+					
+		<a id="MailOptionsLink" href="http://mail.yahoo.com/ym/Options?YY=99114" title="Navigate to the Mail Options page" style="text-decoration:underline;">Options </a>
+	    			</span>
+	</div>
+</div>
+
+
+<table class="applicationcontainer confirmationview" cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="top">
+<td width="7" id="first"><spacer type="block" width="7"></td>
+<td width="3" width="3" id="spacer"><spacer type="block" width="3"></td>
+<td class="content">
+<!-- START MAIN APPLICATION CONTENT -->
+
+					
+<h2>Error #3: Your login session has expired.</h2>
+
+
+					
+<h3 style="margin:.5em 0;">Why does my session expire?</h3>
+<p>Login sessions expire for two reasons.</p> 
+<ol>
+<li>For your security, your Yahoo! Mail session <b>expires a maximum of twenty-four hours</b> after you have logged in. If you have chosen in your Yahoo! User Information (found be visiting "My Account" next to the Yahoo! Mail logo at the top of this page) to be prompted for a password more frequently than every day, your session will expire after the specified amount of time.</li>
+<li>If you do not accept the <b>cookies</b> set on login or your computer is not configured to accept cookies, your session will expire almost immediately. We use cookies (small pieces of site information) to assist us in user authentication and in saving configuration information. Cookies are required for Yahoo! Mail.</li>
+</ol>
+<p>If you see this message immediately after logging in, you should check the following:</p> 
+<ul>
+<li>Check to see that your computer system time is accurate. Cookies are time sensitive and may not work if your computer date is incorrect by a large amount.</li> 
+<li>Make sure that your browser is configured to accept cookies or that you agree to accept cookies during the login process.</li> 
+<li>Turn off any third party programs or control panels that automatically reject cookies.</li>
+</ul>	  
+<p><b><a href="http://mail.yahoo.com/?.done=http%3a%2f%2fus.f534.mail.yahoo.com%2fym%2flogin" target=_top>Re-login to Yahoo! Mail</a></b></p>
+					
+
+<!-- END MAIN APPLICATION CONTENT -->					
+</td>
+</tr>
+</table>
+
+<script>
+function composeClickHandler(loc)
+{
+	try{
+	if( parent.showCompose )
+		parent.showCompose();
+	else window.location = loc;
+	}
+	catch(error){ window.location = loc; }
+}
+</script>
+<div id="mailshortcuts" class="shortcuts">
+	<strong><a name="mailshortcuts">Mail Shortcuts</a></strong>
+	<div>
+		<ul class="first">
+			<li class="special"><a href="http://mail.yahoo.com/ym/ShowFolder?rb=Inbox&YN=1&YY=325971">Check Mail</a> Ctrl+<img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/shift1.gif" width="9" height="8" alt="shift" border="0">+C</li>
+			<li class="special"><a href='javascript:if(typeof(composeClickHandler)!="undefined")composeClickHandler("http://mail.yahoo.com/ym/Compose?YY=857842");else{window.location="http://mail.yahoo.com/ym/Compose?YY=769070";}'>Compose</a> Ctrl+<img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/shift1.gif" width="9" height="8" alt="shift" border="0">+P</li>
+		</ul>
+		<ul>
+			<li class="special"><a href="http://mail.yahoo.com/ym/Folders?YY=754753">Folders</a> Ctrl+<img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/shift1.gif" width="9" height="8" alt="shift" border="0">+F</li>
+			<li class="special"><a href="http://mail.yahoo.com/ym/Search?P=1&YY=269701">Advanced Search</a> Ctrl+<img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/shift1.gif" width="9" height="8" alt="shift" border="0">+S</li>
+		</ul>
+		<ul class="last">
+			<li><a href="http://mail.yahoo.com/ym/Options?YY=112659">Options</a></li>
+			<li class="special"><a target="_top" href="http://help.yahoo.com/help/us/mail/">Help</a> Ctrl+<img src="http://us.i1.yimg.com/us.yimg.com/i/us/pim/r/medici/all/shift1.gif" width="9" height="8" alt="shift" border="0">+H</li>
+		</ul>
+	</div> 
+</div>
+
+
+<div id="addressbookshortcuts" class="shortcuts">
+	<strong><a target="_top" name="addressbookshortcuts">Address Book Shortcuts</a></strong>	
+	<div>
+		<ul class="first">
+			<li><a target="_top" href="http://address.mail.yahoo.com?addcontact">Add Contact</a></li>
+			<li><a target="_top" href="http://address.mail.yahoo.com?Add&A=g">Add Category</a></li>
+		</ul>
+		<ul>			
+			<li><a target="_top" href="http://address.mail.yahoo.com">View Contacts</a></li>
+			<li><a target="_top" href="http://address.mail.yahoo.com?A=v&cat=__ll">View Lists</a></li>
+		</ul>				
+		<ul>
+			            <li><a target="_top" href="http://mail.yahoo.com/ym/quickbuilder">Quickbuilder</a></li>
+            			<li><a target="_top" href="http://address.mail.yahoo.com?A=B">Import Contacts</a></li>
+		        			<li><a target="_top" href="http://address.mail.yahoo.com?A=x&A2=11">Synchronize</a></li>
+		        		</ul>
+		<ul class="last">							
+			<li><a target="_top" href="http://address.mail.yahoo.com?A=o">Addresses Options</a></li>
+			<li><a target="_top" href="http://help.yahoo.com/help/us/ab/">Addresses Help</a></li>
+		</ul>
+	</div> 
+</div>
+
+<div id="calendarshortcuts" class="shortcuts">
+	<strong><a target="_top" name="calendarshortcuts">Calendar Shortcuts</a></strong>
+	<div>
+		<ul class="first">
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=5">Add Event</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=33">Add Task</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=5&evt_type=13">Add Birthday</a></li>
+		</ul>
+		<ul>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=0">Day</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=1">Week</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=2">Month</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=3">Year</a></li>
+		</ul>
+		<ul>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=42">Event List</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=42&POS=0&TYP=101&MOD=0">Reminders</a></li>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=32">Tasks</a></li>
+		</ul>
+		<ul>
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=84">Sharing</a></li>
+		        			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=120">Synchronize</a></li>
+		        		</ul>
+		<ul class="last">
+			<li><a target="_top" href="http://calendar.mail.yahoo.com/?v=70">Calendar Options</a></li>
+			<li><a target="_top" href="http://help.yahoo.com/help/us/cal/">Calendar Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="notepadshortcuts" class="shortcuts">
+	<strong><a target="_top" name="notepadshortcuts">Notepad Shortcuts</a></strong>
+	<div>
+		<ul class="first">
+			<li><a target="_top" href="http://notepad.mail.yahoo.com/?v=161">Add Note</a></li>
+			<li><a target="_top" href="http://notepad.mail.yahoo.com/?v=168">Add Folder</a></li>
+		</ul>
+		<ul>
+			<li><a target="_top" href="http://notepad.mail.yahoo.com/?v=164">View Notes</a></li>
+		</ul>
+		<ul class="last">
+			<li><a target="_top" href="http://notepad.mail.yahoo.com/?v=165">Notepad Options</a></li>
+			<li><a target="_top" href="http://help.yahoo.com/help/us/notepad/">Notepad Help</a></li>
+		</ul>
+	</div> 
+</div>
+
+
+<div id="searchmenu" class="buttonmenu">
+<strong>Advanced Search</strong>
+<ul><li value="0">Advanced Search</li></ul>
+</div>
+<script type="text/javascript">
+
+	if(typeof Search_Click_top != 'undefined' && typeof Search_Click_bottom != 'undefined')
+	{
+	    var oSearchTop = MenuButton('searchmail0',Search_Click_top,'searchmenu',SearchMenu_Click);
+	    var oSearchBottom = MenuButton('searchmail1',Search_Click_bottom,'searchmenu',SearchMenu_Click);
+	}
+	
+</script>
+<br>
+
+	<!-- SpaceID=0 robot -->
+
+
+
+        <!-- SpaceID=0 robot -->
+
+        <!-- SpaceID=0 robot -->
+
+
+<!-- error code:  Login -->
+<!-- SpaceID=0 robot -->
+
+</body>
+</html>
+<!-- v3.306.15 1156887636 -->
+<!-- 0.01588 -->
+<!-- web53407.mail.yahoo.com uncompressed Tue Sep 12 09:03:03 PDT 2006 -->

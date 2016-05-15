@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CancelamentoPasseFiscal" targetNamespace="http://www.portalfiscal.inf.br/passefiscal/ws/CancelamentoPasseFiscal.xsd" elementFormDefault="qualified" xmlns="http://www.portalfiscal.inf.br/passefiscal/ws/CancelamentoPasseFiscal.xsd" xmlns:mstns="http://www.portalfiscal.inf.br/passefiscal/ws/CancelamentoPasseFiscal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+  <xs:simpleType name="numeroPasseType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Z]{20}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dataType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{1,2}/\d{1,2}/\d{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="horaType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{1,2}:\d{2}:\d{2}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PFCancel" type="dadosPFCanceladoType" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="dadosPFCanceladoType">
+    <xs:sequence>
+      <xs:element name="nroPF" type="numeroPasseType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="dataCancel" type="dataType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="horaCancel" type="horaType" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

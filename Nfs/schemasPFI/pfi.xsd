@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pfi="http://www.portalfiscal.inf.br/pfi" targetNamespace="http://www.portalfiscal.inf.br/pfi" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="dadosPFI.xsd"/>
+	<xs:element name="PFI" type="pfi:TPFI">
+		<xs:annotation>
+			<xs:documentation>Passe Fiscal Interestadual (PFI) do sistema de Controle Interestadual de Mercadorias em Trânsito</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

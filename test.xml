@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enviNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="1.10">
+<idLote>01</idLote>
+<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+	<infNFe Id="ID000000" versao="1.10">
+		<ide>
+			<cUF>11</cUF>
+			<cNF>024729814</cNF>
+			<natOp>5920</natOp>
+			<indPag>0</indPag>
+			<mod>255</mod>
+			<serie>0</serie>
+			<nNF>247298</nNF>
+			<dEmi>2008-01-14</dEmi>
+			<dSaiEnt>2008-01-14</dSaiEnt>
+			<tpNF>0</tpNF>
+			<cMunFG>0000000</cMunFG>
+			<NFref id="nfFrete">
+				<refNFe>00000000000000000000000000000000000000000000</refNFe>
+			</NFref>
+			<tpImp>2</tpImp>
+			<tpEmis>1</tpEmis>
+			<cDV>3</cDV>
+			<tpAmb>1</tpAmb>
+			<tpNFe>1</tpNFe>
+		</ide>
+		<emit>
+			<CNPJ>12277646000108</CNPJ>
+			<xNome>COOP.REG. DE ACUCAR E ALCOOL DE ALAGOAS</xNome>
+			
+			<enderEmit>
+				<xLgr>RUA SA E ALBUQUERQUE ,235 1- ANDAR</xLgr>
+				<nro>235</nro>
+				
+				<xBairro>Jaragua</xBairro>
+				<cMun>2704302</cMun>
+				<xMun>Maceio</xMun>
+				<UF>AL</UF>
+				
+			</enderEmit>
+			<IE>240015061</IE>
+			
+		</emit>
+
+		<dest>
+			<CNPJ>33337122022104</CNPJ>
+			<xNome>CHEVRON BRASIL LTDA</xNome>
+			<enderDest>
+				<xLgr>AV. TOTE LOMANTO, S/N BR 330 KM 4</xLgr>
+				<nro>235</nro>
+				<xBairro>SUISSA</xBairro>
+				<cMun>2704302</cMun>
+				<xMun>Maceio</xMun>
+				<UF>BA</UF>
+				
+			</enderDest>
+			<IE>42938509</IE>
+			
+		</dest>
+		
+		<det nItem="990">
+			<prod>
+				<cProd>CFOP5920</cProd>
+				<cEAN/>
+				<xProd>ALCOOL E. HIDRATADO CARBURANTE</xProd>
+				<NCM>20072010</NCM>
+				<EXTIPI>00</EXTIPI>
+				<genero>0</genero>
+				<CFOP>5920</CFOP>
+				<uCom>1</uCom>
+				<qCom>10.0000</qCom>
+				<vUnCom>0.0000</vUnCom>
+				<vProd>0</vProd>
+				<cEANTrib/>
+				<uTrib>1</uTrib>
+				<qTrib>10.0000</qTrib>
+				<vUnTrib>0.0000</vUnTrib>
+		
+			</prod>
+			<imposto>
+				<ICMS>
+					
+				<ICMS00><orig>0</orig><CST>00</CST><modBC>0</modBC><vBC>0</vBC><pICMS>0</pICMS><vICMS>0</vICMS></ICMS00></ICMS>
+				<IPI>
+					<clEnq>Strin</clEnq>
+					<CNPJProd>00000000000000</CNPJProd>
+					<cSelo>String</cSelo>
+					<qSelo>0</qSelo>
+					<cEnq>Str</cEnq>
+					<IPITrib>
+						<CST>00</CST>
+						<vBC>0</vBC>
+						<pIPI>0</pIPI>
+						<vIPI>0</vIPI>
+					</IPITrib>
+				</IPI>
+				<II>
+					<vBC>0</vBC>
+					<vDespAdu>0</vDespAdu>
+					<vII>0</vII>
+					<vIOF>0</vIOF>
+				</II>
+				<PIS>
+					<PISAliq>
+						<CST>01</CST>
+						<vBC>0</vBC>
+						<pPIS>0</pPIS>
+						<vPIS>0</vPIS>
+					</PISAliq>
+				</PIS>
+				<PISST>
+					<vBC>10.00</vBC>
+					<pPIS>10.00</pPIS>
+					<vPIS>10.00</vPIS>
+				</PISST>
+				<COFINS>
+					<COFINSAliq>
+						<CST>01</CST>
+						<vBC>0</vBC>
+						<pCOFINS>0</pCOFINS>
+						<vCOFINS>0</vCOFINS>
+					</COFINSAliq>
+				</COFINS>
+				<COFINSST>
+					<vBC>10.00</vBC>
+					<pCOFINS>10.00</pCOFINS>
+					<vCOFINS>10.00</vCOFINS>
+				</COFINSST>
+				
+			</imposto>
+			
+		</det>
+		<total>
+			<ICMSTot>
+				<vBC>0.00</vBC>
+				<vICMS>0.00</vICMS>
+				<vBCST>0</vBCST>
+				<vST>0</vST>
+				<vProd>0</vProd>
+				<vFrete>0</vFrete>
+				<vSeg>0</vSeg>
+				<vDesc>0</vDesc>
+				<vII>0</vII>
+				<vIPI>0.00</vIPI>
+				<vPIS>0.00</vPIS>
+				<vCOFINS>0.00</vCOFINS>
+				<vOutro>0</vOutro>
+				<vNF>0.00</vNF>
+			</ICMSTot>
+			<ISSQNtot>
+				<vServ>10.00</vServ>
+				<vBC>10.00</vBC>
+				<vISS>10.00</vISS>
+				<vPIS>10.00</vPIS>
+				<vCOFINS>10.00</vCOFINS>
+			</ISSQNtot>
+			<retTrib>
+				<vRetPIS>10.00</vRetPIS>
+				<vRetCOFINS>10.00</vRetCOFINS>
+				<vRetCSLL>10.00</vRetCSLL>
+				<vBCIRRF>10.00</vBCIRRF>
+				<vIRRF>10.00</vIRRF>
+				<vBCRetPrev>10.00</vBCRetPrev>
+				<vRetPrev>10.00</vRetPrev>
+			</retTrib>
+		</total>
+		<transp>
+			<modFrete>1</modFrete>
+			<transporta>
+				<CNPJ>65649154000154</CNPJ>
+				<xNome>DATAGRO PUBLICACOES LTDA</xNome>
+				<UF>AL</UF>
+			</transporta>
+	
+			<veicTransp>
+				<placa>TES1234</placa>
+				<UF>AC</UF>
+				
+			</veicTransp>
+			
+			
+		</transp>
+	
+	</infNFe>
+
+</NFe>
+</enviNFe>

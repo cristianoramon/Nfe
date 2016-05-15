@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.portalfiscal.inf.br/passefiscal/ws/AutorizacaoPasseFiscal.xsd" xmlns:mstns="http://www.portalfiscal.inf.br/passefiscal/ws/AutorizacaoPasseFiscal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.portalfiscal.inf.br/passefiscal/ws/AutorizacaoPasseFiscal.xsd" elementFormDefault="qualified" version="1.0" id="AutorizacaoPasseFiscal">
+	<xs:simpleType name="dataType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{1,2}/\d{1,2}/\d{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="horaType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{1,2}:\d{2}:\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="numeroPasseType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9A-Z]{20}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="idCodBarraType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9A-Z]{15}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PF" type="pfType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="pfType">
+		<xs:sequence>
+			<xs:element name="NFs" type="nfsType"/>
+			<xs:element name="numero" type="numeroPasseType"/>
+			<xs:element name="linhaDig" type="idCodBarraType"/>
+			<xs:element name="data" type="dataType"/>
+			<xs:element name="hora" type="horaType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="nroNotaType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{1,9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="cpfCnpjType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{11}|\d{14}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="idNFType">
+		<xs:sequence>
+			<xs:element name="nroNota" type="nroNotaType"/>
+			<xs:element name="cpfCnpj" type="cpfCnpjType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nfsType">
+		<xs:sequence>
+			<xs:sequence>
+				<xs:element name="idNF" type="idNFType" maxOccurs="100"/>
+			</xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

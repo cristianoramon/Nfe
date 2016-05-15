@@ -1,0 +1,139 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><script language="JavaScript" src="menu_data/crossbrowser.js" type="text/javascript">
+</script>
+<script language="JavaScript" src="menu_data/outlook.js" type="text/javascript">
+</script>
+
+<script>
+
+// ---------------------------------------------------------------------------
+// Example of howto: use Outlook Like Bar
+// ---------------------------------------------------------------------------
+
+
+  //create OutlookBar-Object:
+  //              Name
+  //              x-position
+  //              y-Position
+  //              width
+  //              height
+  //              background-color
+  //              page background-color (needed for OP5)
+  //(screenSize object is created by 'crossbrowser.js')
+  //
+
+//  var o = new createOutlookBar('Bar',0,0,screenSize.width,screenSize.height,'#606060','white') // OutlookBar
+ //##EFEFE7
+  var o = new createOutlookBar('Bar',0,0,127,screenSize.height,'','black') // OutlookBar
+  var p
+
+  //create first panel..
+  p = new createPanel('al','NF Eletronica');
+
+  //add buttons:
+  //             image name
+  //             label text
+  //             onClick JavaScript code
+  //
+
+  p.addButton('Figuras/ebookonline.gif','Gerar Nota','javascript:parent.main.location.href="GerarNfSaida.php" ');
+  //p.addButton('Figuras/word.gif','Nota Complemento','javascript:parent.main.location.href="GerarNfSaida.php" ');
+ // p.addButton('Figuras/word.gif','Gerar Nota','javascript:parent.main.location.href="GerarNfSaida.php" ');
+  o.addPanel(p);
+
+    //create two empty panels...
+  p = new createPanel('p','Status');
+  p.addButton('Figuras/prefstatus.gif','Geral','javascript:parent.main.location.href="status/StatusGeral.php"');
+  //p.addButton('Figuras/baway.gif','Aprovada','javascript:parent.main.location.href="status/StatusGeralAprovada.php"');
+  //p.addButton('Figuras/bbusy.gif','Rejeitada','javascript:parent.main.location.href="status/StatusGeralNegada.php" ');
+  o.addPanel(p);
+  
+    //create two empty panels...
+  p = new createPanel('p','Visualização  Nfe');
+  p.addButton('Figuras/status.jpg','Nfe','javascript:parent.main.location.href="Relatorio/VisualizacaoDanfe.php"');
+  o.addPanel(p);
+
+    //create two empty panels... VisualizacaoDanfeContig
+  p = new createPanel('p','Status Servidor');
+  p.addButton('Figuras/status.jpg','Nfe','javascript:parent.main.location.href="status/StatusWebServ.php"');
+  o.addPanel(p);
+
+  //create two empty panels... VisualizacaoDanfeContig
+  p = new createPanel('p','Nfs Contigencia');
+  p.addButton('Figuras/status.jpg','Nfe','javascript:parent.main.location.href="Relatorio/VisualizacaoDanfeContigencia.php"');
+  o.addPanel(p);
+  
+   //create two empty panels... VisualizacaoDanfeContig
+  //p = new createPanel('p','Renvio de Notas');
+ // p.addButton('Figuras/status.jpg','Nfe','javascript:parent.main.location.href="RenviodeNota.php"');
+ // o.addPanel(p);
+  
+   //create two empty panels... VisualizacaoDanfeContig
+  //create two empty panels... VisualizacaoDanfeContig
+ // p = new createPanel('p','Nfe Problema Conexao');
+ // p.addButton('Figuras/status.jpg','Nfe','javascript:parent.main.location.href="status/StatusGeralErro.php"');
+ // o.addPanel(p);
+  
+  //p = new createPanel('p','Contigencia Manual');
+  //p.addButton('Figuras/word.gif','Entrar Contigencia','javascript:parent.main.location.href="manuContigencia/entrarContigencia.php"');
+  //p.addButton('Figuras/word.gif','Sair Contigencia','javascript:parent.main.location.href="manuContigencia/sairContigencia.php"');
+ // o.addPanel(p); 
+  
+  p = new createPanel('p','Dist Arquivo');
+  p.addButton('Figuras/word.gif','Dist Arquivo','javascript:parent.main.location.href="DistrXML/DistrXML.php"')
+  o.addPanel(p); 
+ 
+ 
+  
+//  p = new createPanel('l2','Leeres Panel 2');
+//  o.addPanel(p);
+
+  o.draw();         //draw the Outlook Like Bar!
+
+
+//-----------------------------------------------------------------------------
+//functions to manage window resize
+//-----------------------------------------------------------------------------
+//resize OP5 (test screenSize every 100ms)
+function resize_op5() {
+  if (bt.op5) {
+    o.showPanel(o.aktPanel);
+    var s = new createPageSize();
+    if ((screenSize.width!=s.width) || (screenSize.height!=s.height)) {
+      screenSize=new createPageSize();
+      //need setTimeout or resize on window-maximize will not work correct!
+      //benötige das setTimeout oder das Maximieren funktioniert nicht richtig
+      setTimeout("o.resize(0,0,screenSize.width,screenSize.height)",100);
+    }
+    setTimeout("resize_op5()",100);
+  }
+}
+
+//resize IE & NS (onResize event!)
+function myOnResize() {
+  if (bt.ie4 || bt.ie5 || bt.ns5) {
+    var s=new createPageSize();
+    o.resize(0,0,s.width,s.height);
+  }
+  else
+    if (bt.ns4) location.reload();
+}
+
+</script><style type="text/css">.button {width:300; text-align:center; font-family:arial; font-size:12pt; cursor:hand; border-width:3; border-style:outset; border-color:#EFEFE7; text-color:white;background-image:url(Figuras2/botao2.jpg);}.backFundo { background-image:url(Figuras2/Fundo2.jpg);}.noLine {text-decoration:none;}.imgB {color:white; font-family:arial; font-size:10pt;}.imgbin {border-width:3; border-style:inset; border-color:silver;}.imgbout {border-width:3; border-style:outset; border-color:silver;} .imgnob {border-width:3; border-style:solid; border-color:;}</style></head><body onload="resize_op5();" onresize="myOnResize();"><div id="Bar" style="position:absolute; left:0; top:0; width:127; height:737; background-color:; clip:rect(0,127,737,0)"><div id="Bar_panel0" style="position:absolute; left:0; top:0; width:127; height:597; clip:rect(0px, 127px, 597px, 0px); background-image:url(Figuras2/fundo10.jpg);"><div id="Bar_panel0_f" style="position:absolute; left:0; top:38; width:127; height:80; background-color:;"><div id="Bar_panel0_b0" class="imgB" style="position:absolute; left:0; width:127; top:0; text-align:center;"><img src="menu_data/ebookonline.gif" class="imgnob" onmouseover="this.className='imgbout';" onmousedown="this.className='imgbin';" onmouseup='this.className="imgbout";javascript:parent.main.location.href="GerarNfSaida.php" ;' onmouseout="this.className='imgnob';"><br>Gerar Nota</div></div><div id="Bar_panel0_c" class="button" onclick="javascript:Barvar.showPanel(0);" style="position:absolute; left:0; top:0; width:121; height:22;"><a href="#" onclick="Barvar.showPanel(0);this.blur();return false;" class="noLine"><font class="noLine&quot;" color="black">NF Eletronica</font></a></div><div id="Bar_panel0_m1" style="position: absolute; top: 40px; left: 107px; visibility: hidden;"><a href="#" onclick="alvar.down(16);this.blur();return false;" onmouseover="alvar.clear();"><img src="menu_data/arrowup.htm" border="0" height="16" width="16"></a></div><div id="Bar_panel0_m2" style="position: absolute; top: 569px; left: 107px; visibility: hidden;"><a href="#" onclick="alvar.up(16);this.blur();return false" onmouseover="alvar.clear();"><img src="menu_data/arrowdown.htm" border="0" height="16" width="16"></a></div></div><div id="Bar_panel1" style="position:absolute; left:0; top:28; width:127; height:597; clip:rect(0px, 127px, 597px, 0px); background-image:url(Figuras2/fundo10.jpg);"><div id="Bar_panel1_f" style="position:absolute; left:0; top:38; width:127; height:80; background-color:;"><div id="Bar_panel1_b0" class="imgB" style="position:absolute; left:0; width:127; top:0; text-align:center;"><img src="menu_data/prefstatus.gif" class="imgnob" onmouseover="this.className='imgbout';" onmousedown="this.className='imgbin';" onmouseup='this.className="imgbout";javascript:parent.main.location.href="status/StatusGeral.php";' onmouseout="this.className='imgnob';"><br>Geral</div></div><div id="Bar_panel1_c" class="button" onclick="javascript:Barvar.showPanel(1);" style="position:absolute; left:0; top:0; width:121; height:22;"><a href="#" onclick="Barvar.showPanel(1);this.blur();return false;" class="noLine"><font class="noLine&quot;" color="black">Status</font></a></div><div id="Bar_panel1_m1" style="position: absolute; top: 40px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.down(16);this.blur();return false;" onmouseover="pvar.clear();"><img src="menu_data/arrowup.htm" border="0" height="16" width="16"></a></div><div id="Bar_panel1_m2" style="position: absolute; top: 569px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.up(16);this.blur();return false" onmouseover="pvar.clear();"><img src="menu_data/arrowdown.htm" border="0" height="16" width="16"></a></div></div><div id="Bar_panel2" style="position:absolute; left:0; top:56; width:127; height:597; clip:rect(0px, 127px, 597px, 0px); background-image:url(Figuras2/fundo10.jpg);"><div id="Bar_panel2_f" style="position:absolute; left:0; top:38; width:127; height:80; background-color:;"><div id="Bar_panel2_b0" class="imgB" style="position:absolute; left:0; width:127; top:0; text-align:center;"><img src="menu_data/status.jpg" class="imgnob" onmouseover="this.className='imgbout';" onmousedown="this.className='imgbin';" onmouseup='this.className="imgbout";javascript:parent.main.location.href="Relatorio/VisualizacaoDanfe.php";' onmouseout="this.className='imgnob';"><br>Nfe</div></div><div id="Bar_panel2_c" class="button" onclick="javascript:Barvar.showPanel(2);" style="position:absolute; left:0; top:0; width:121; height:22;"><a href="#" onclick="Barvar.showPanel(2);this.blur();return false;" class="noLine"><font class="noLine&quot;" color="black">Visualização  Nfe</font></a></div><div id="Bar_panel2_m1" style="position: absolute; top: 40px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.down(16);this.blur();return false;" onmouseover="pvar.clear();"><img src="menu_data/arrowup.htm" border="0" height="16" width="16"></a></div><div id="Bar_panel2_m2" style="position: absolute; top: 569px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.up(16);this.blur();return false" onmouseover="pvar.clear();"><img src="menu_data/arrowdown.htm" border="0" height="16" width="16"></a></div></div><div id="Bar_panel3" style="position:absolute; left:0; top:84; width:127; height:597; clip:rect(0px, 127px, 597px, 0px); background-image:url(Figuras2/fundo10.jpg);"><div id="Bar_panel3_f" style="position:absolute; left:0; top:38; width:127; height:80; background-color:;"><div id="Bar_panel3_b0" class="imgB" style="position:absolute; left:0; width:127; top:0; text-align:center;"><img src="menu_data/status.jpg" class="imgnob" onmouseover="this.className='imgbout';" onmousedown="this.className='imgbin';" onmouseup='this.className="imgbout";javascript:parent.main.location.href="status/StatusWebServ.php";' onmouseout="this.className='imgnob';"><br>Nfe</div></div><div id="Bar_panel3_c" class="button" onclick="javascript:Barvar.showPanel(3);" style="position:absolute; left:0; top:0; width:121; height:22;"><a href="#" onclick="Barvar.showPanel(3);this.blur();return false;" class="noLine"><font class="noLine&quot;" color="black">Status Servidor</font></a></div><div id="Bar_panel3_m1" style="position: absolute; top: 40px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.down(16);this.blur();return false;" onmouseover="pvar.clear();"><img src="menu_data/arrowup.htm" border="0" height="16" width="16"></a></div><div id="Bar_panel3_m2" style="position: absolute; top: 569px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.up(16);this.blur();return false" onmouseover="pvar.clear();"><img src="menu_data/arrowdown.htm" border="0" height="16" width="16"></a></div></div><div id="Bar_panel4" style="position:absolute; left:0; top:112; width:127; height:597; clip:rect(0px, 127px, 597px, 0px); background-image:url(Figuras2/fundo10.jpg);"><div id="Bar_panel4_f" style="position:absolute; left:0; top:38; width:127; height:80; background-color:;"><div id="Bar_panel4_b0" class="imgB" style="position:absolute; left:0; width:127; top:0; text-align:center;"><img src="menu_data/status.jpg" class="imgnob" onmouseover="this.className='imgbout';" onmousedown="this.className='imgbin';" onmouseup='this.className="imgbout";javascript:parent.main.location.href="Relatorio/VisualizacaoDanfeContigencia.php";' onmouseout="this.className='imgnob';"><br>Nfe</div></div><div id="Bar_panel4_c" class="button" onclick="javascript:Barvar.showPanel(4);" style="position:absolute; left:0; top:0; width:121; height:22;"><a href="#" onclick="Barvar.showPanel(4);this.blur();return false;" class="noLine"><font class="noLine&quot;" color="black">Nfs Contigencia</font></a></div><div id="Bar_panel4_m1" style="position: absolute; top: 40px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.down(16);this.blur();return false;" onmouseover="pvar.clear();"><img src="menu_data/arrowup.htm" border="0" height="16" width="16"></a></div><div id="Bar_panel4_m2" style="position: absolute; top: 569px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.up(16);this.blur();return false" onmouseover="pvar.clear();"><img src="menu_data/arrowdown.htm" border="0" height="16" width="16"></a></div></div><div id="Bar_panel5" style="position:absolute; left:0; top:140; width:127; height:597; clip:rect(0px, 127px, 597px, 0px); background-image:url(Figuras2/fundo10.jpg);"><div id="Bar_panel5_f" style="position:absolute; left:0; top:38; width:127; height:80; background-color:;"><div id="Bar_panel5_b0" class="imgB" style="position:absolute; left:0; width:127; top:0; text-align:center;"><img src="menu_data/word.gif" class="imgnob" onmouseover="this.className='imgbout';" onmousedown="this.className='imgbin';" onmouseup='this.className="imgbout";javascript:parent.main.location.href="DistrXML/DistrXML.php";' onmouseout="this.className='imgnob';"><br>Dist Arquivo</div></div><div id="Bar_panel5_c" class="button" onclick="javascript:Barvar.showPanel(5);" style="position:absolute; left:0; top:0; width:121; height:22;"><a href="#" onclick="Barvar.showPanel(5);this.blur();return false;" class="noLine"><font class="noLine&quot;" color="black">Dist Arquivo</font></a></div><div id="Bar_panel5_m1" style="position: absolute; top: 40px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.down(16);this.blur();return false;" onmouseover="pvar.clear();"><img src="menu_data/arrowup.htm" border="0" height="16" width="16"></a></div><div id="Bar_panel5_m2" style="position: absolute; top: 569px; left: 107px; visibility: hidden;"><a href="#" onclick="pvar.up(16);this.blur();return false" onmouseover="pvar.clear();"><img src="menu_data/arrowdown.htm" border="0" height="16" width="16"></a></div></div></div>
+
+
+<!-- need an onResize event to redraw outlookbar after pagesize changes! -->
+<!-- OP5 does not support onResize event! use setTimeout every 100ms -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+
+
+</body></html>

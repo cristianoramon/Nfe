@@ -1,0 +1,275 @@
+TEXTAREA.txtADsSolicit {
+	font-size: 9px;
+	font-style: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #00923F;
+	height: 35px;
+	color:#006600;
+        text-transform: uppercase;
+}
+INPUT.txtLogin1 {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-style: normal;
+	width: 128px;
+	border: 0px;
+	height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+INPUT.txtEmpresa {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-style: normal;
+	width: 110px;
+	border: 0px;
+	height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+INPUT.txtCampoPesq {
+	font-size: 9px;
+	font-style: normal;
+	width: 200px;
+	border: 0px;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #CBE4CB;
+        text-transform: uppercase; 
+}
+INPUT.txtCampoOS{
+	font-size: 10px;
+	font-style: normal;
+	height: 17px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #00923F;
+	color:#006600;
+        text-transform: uppercase;
+}
+
+INPUT.TXT{
+	font-size: 9px;
+	font-style: normal;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #00923F;
+	color:#006600;
+	width: 70px;
+        text-transform: uppercase; 
+}
+INPUT.TXT2{
+	font-size: 9px;
+	font-style: normal;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #00923F;
+	color:#006600;
+	width: 250px;
+        text-transform: uppercase;
+}
+SELECT.cmbCampoOS {
+	font-size: 9px;
+	font-style: normal;
+	border: 1px solid #00923F;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	color:#006600;
+	width: 122px;
+}
+
+SELECT.cmbCampo {
+	font-size: 9px;
+	font-style: normal;
+	width: 50px;
+	border: 0px none #009900;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #CBE4CB;
+        text-transform: uppercase;
+}
+
+SELECT.cmbCampo3 {
+	font-size: 9px;
+	font-style: normal;
+	width: 200px;
+	border: 0px none #009900;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #CBE4CB;
+        
+}
+
+SELECT.cmbCampo4 {
+	font-size: 9px;
+	font-style: normal;
+	width: 500px;
+	border: 0px none #009900;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #CBE4CB;
+}
+
+SELECT.cmbPercurso {
+	font-size: 9px;
+	font-style: normal;
+	width: 100px;
+	border: 0px none #009900;
+	height: 70px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #CBE4CB;
+}
+
+TD.tdLogin {
+	background-repeat: no-repeat;
+	background-image:  url(FigurasNF/txLogin2.jpg);
+	background-position: right;
+}
+TD.tdSenha {
+	background-repeat: no-repeat;
+	background-image:  url(FigurasNF/txSenha1.jpg);
+	background-position: right;
+}
+
+TD.tdEmpresa {
+	background-repeat: no-repeat;
+	background-image:  url(FigurasNF/txtEmpresa1.jpg);
+	background-position: right;
+}
+
+TD.tdBanco {
+	background-repeat: no-repeat;
+	background-image:  url(FigurasNF/txtBanco1.jpg);
+	background-position: right;
+}
+.tdFundo {
+	background-repeat: no-repeat;
+	background-image:  url(FigurasNF/FundoNF.jpg);
+	background-position: center;
+}
+.tdCampoPesq {
+    background-repeat: no-repeat;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-position:right center;
+    
+}
+.tdTitFundo {
+	background-repeat: no-repeat;
+	font-family: "AvantGarde Bk BT";
+	font-size: 13pt;
+	font-style: italic;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-position:left;
+
+}
+.tdTopo {
+	background-attachment: scroll;
+	background-image:   url(FigurasNF/Topo.jpg);
+	background-repeat: no-repeat;
+}
+TABLE.tblForm {
+	width: 627px; 
+}
+.rodape {
+	font-family: arial;
+	font-size: 9px;
+	font-style: normal;
+	font-weight: bold;
+	color: #006600;
+}	
+
+INPUT.TEXT_COD { 
+            font-family:Verdana; 
+            color:#006600; 
+            font-size:9; 
+            background:filter=alpha(Opacity=100); 
+            width:45;
+	    height: 18px;
+            text-transform: uppercase;
+}
+
+INPUT.TEXT_DSC { font-family:Verdana; 
+                 color:#006600; 
+                 font-size:9;
+                 background:filter=alpha(Opacity=100); 
+                 width:250;
+		 height: 18px;
+                 text-transform: uppercase;
+ }
+ 
+INPUT.TEXT_EMAIL { font-family:Verdana; 
+                 color:#006600; 
+                 font-size:9;
+                 background:filter=alpha(Opacity=100); 
+                 width:200;
+				 height: 18px;
+ }
+ 
+TR.LinhaTitCad {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #009900;
+}
+TD.LinhaIncluir {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #006600;
+}
+
+IMG {cursor:hand;}
+
+.paginacao {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+TD.SolicitanteTit {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;	
+}
+TR.LinhaTitSolic {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+    
+}
+TR.LinhaDadosSolic {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #006600;
+    
+}
+
+TR.CURSOR {
+cursor:hand;
+}
+
+INPUT.btnAtual{
+	font-size: 10px;
+	font-style: normal;
+	height: 17px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #049546;
+	border: 1px solid #00923F;
+	color:#FFFFFF;
+        text-transform: uppercase;
+}

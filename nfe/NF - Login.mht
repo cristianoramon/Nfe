@@ -1,0 +1,468 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: NF - Login
+Date: Wed, 22 Jun 2011 09:10:13 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC30BC.31CC28B0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CC30BC.31CC28B0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.crpaaa.com.br/nfev3/
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>NF - Login</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"http://www.crpaaa.com.br/estilo.css">
+<SCRIPT language=3DJavaScript type=3Dtext/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init=3D=3Dtrue) with (navigator) {if =
+((appName=3D=3D"Netscape")&&(parseInt(appVersion)=3D=3D4)) {
+    document.MM_pgW=3DinnerWidth; document.MM_pgH=3DinnerHeight; =
+onresize=3DMM_reloadPage; }}
+  else if (innerWidth!=3Ddocument.MM_pgW || =
+innerHeight!=3Ddocument.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=3Ddocument.MM_sr; =
+for(i=3D0;a&&i<a.length&&(x=3Da[i])&&x.oSrc;i++) x.src=3Dx.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=3Ddocument; if(d.images){ if(!d.MM_p) d.MM_p=3Dnew Array();
+    var i,j=3Dd.MM_p.length,a=3DMM_preloadImages.arguments; for(i=3D0; =
+i<a.length; i++)
+    if (a[i].indexOf("#")!=3D0){ d.MM_p[j]=3Dnew Image; =
+d.MM_p[j++].src=3Da[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=3Ddocument; =
+if((p=3Dn.indexOf("?"))>0&&parent.frames.length) {
+    d=3Dparent.frames[n.substring(p+1)].document; n=3Dn.substring(0,p);}
+  if(!(x=3Dd[n])&&d.all) x=3Dd.all[n]; for =
+(i=3D0;!x&&i<d.forms.length;i++) x=3Dd.forms[i][n];
+  for(i=3D0;!x&&d.layers&&i<d.layers.length;i++) =
+x=3DMM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=3Dd.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=3D0,x,a=3DMM_swapImage.arguments; document.MM_sr=3Dnew Array; =
+for(i=3D0;i<(a.length-2);i+=3D3)
+   if ((x=3DMM_findObj(a[i]))!=3Dnull){document.MM_sr[j++]=3Dx; =
+if(!x.oSrc) x.oSrc=3Dx.src; x.src=3Da[i+2];}
+}
+
+
+//Fun=E7=E3o responsavel por trocar as imagens  =20
+function trocaImagens(imgName, imgSrc){
+
+//Verifica se  o navegador suporta o objeto imagens
+  if (document.images){
+     if (imgSrc !=3D "none"){
+            document.images[imgName].src =3D imgSrc;
+     }
+  }
+}
+=20
+//Traca figura MouseOuver
+function liga(cod) {
+    if (cod =3D=3D "txtLogin")
+	{
+      imgLogin =3D "url(Figuras/txLogin2.jpg)";
+	  login.style.backgroundImage =3D imgLogin;
+	}
+	else
+	{
+	  imgLogin =3D "url(Figuras/txSenha2.jpg)";
+	  Senha.style.backgroundImage =3D imgLogin;
+	}
+	if ( cod =3D=3D "txtBanco") {
+	  imgLogin =3D "url(Figuras/txtBanco2.jpg)";
+	  Banco.style.backgroundImage =3D imgLogin;
+	}
+	if ( cod =3D=3D "txtEmpresa") {
+	  imgLogin =3D "url(Figuras/txtEmpresa2.jpg)";
+	  Empresa.style.backgroundImage =3D imgLogin;
+	}=20
+	=20
+	/* else=20
+	{
+	  imgLogin =3D "url(Figuras/txtBanco2.jpg)";
+	  Banco.style.backgroundImage =3D imgLogin;
+	} */
+=09
+	eval("frmLogin."+cod+".style.backgroundColor=3D'#CBE4CB'");
+}
+
+//Traca figura MouseOut
+function desliga(cod) {
+    if (cod =3D=3D "txtLogin")
+	{
+      imgLogin =3D "url(Figuras/txLogin1.jpg)";
+	  login.style.backgroundImage =3D imgLogin;
+	}
+	else
+	{
+	  imgLogin =3D "url(Figuras/txSenha1.jpg)";
+	  Senha.style.backgroundImage =3D imgLogin;
+	}
+=09
+	if ( cod =3D=3D "txtBanco") {
+	  imgLogin =3D "url(Figuras/txtBanco1.jpg)";
+	  Banco.style.backgroundImage =3D imgLogin;
+	}
+=09
+	if ( cod =3D=3D "txtEmpresa") {
+	  imgEmpr =3D "url(Figuras/txtEmpresa2.jpg)";
+	  Empresa.style.backgroundImage =3D imgEmpr;
+	}
+=09
+=09
+=09
+	/* else
+	{
+	  imgLogin =3D "url(Figuras/txtBanco1.jpg)";
+	  Banco.style.backgroundImage =3D imgLogin;
+	} */
+	//txtBanco1.jpg
+	eval("frmLogin."+cod+".style.backgroundColor=3D'#FFFFFF'");
+}
+
+function  janOS(pagina,alt,larg){
+ url=3Dpagina;
+ //alert(url);
+ parametros  =3D "height=3D"+alt+", width=3D"+larg;
+ parametros +=3D ", status=3Dyes, location=3Dno";
+ parametros +=3D ", toolbar=3Dno, menubar=3Dno, scrollbars=3Dyes, ";
+ // define o tamanho e o local da janela a ser aberta
+ parametros +=3D "top=3D"+(((screen.height)/2)-(400/2))+", ";
+ parametros +=3D "left=3D"+(((screen.width)/2)-(750/2))+"";
+ //alert(url+"?filial=3D");
+ =
+window.open(url+"?usuario=3D"+document.frmLogin.txtLogin.value.toUpperCas=
+e(),"",parametros);
+
+}
+//-->
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18852"></HEAD>
+<BODY=20
+onload=3D"MM_preloadImages('../FigurasNF/btEntar2.jpg');document.frmLogin=
+.txtLogin.focus()"=20
+leftMargin=3D0 topMargin=3D10 marginheight=3D"0" marginwidth=3D"0">
+<FORM method=3Dpost name=3DfrmLogin action=3Dvalida.php>
+<DIV align=3Dcenter>
+<TABLE class=3DtdFundo border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%"=20
+height=3D"100%">
+  <TBODY>
+  <TR>
+    <TD colSpan=3D2>&nbsp;</TD></TR>
+  <TR>
+    <TD height=3D140 colSpan=3D2>&nbsp;</TD></TR>
+  <TR>
+    <TD height=3D150 width=3D"42%">&nbsp;</TD>
+    <TD width=3D"58%">
+      <TABLE border=3D0 cellSpacing=3D4 cellPadding=3D6 width=3D221>
+        <TBODY>
+        <TR>
+          <TD id=3Dlogin class=3DtdLogin height=3D28 vAlign=3Dtop =
+width=3D213=20
+name=3D"login">
+            <DIV align=3Dright><INPUT onblur=3Ddesliga(this.name); =
+class=3DtxtLogin1=20
+            onfocus=3Dliga(this.name); maxLength=3D10 name=3DtxtLogin> =
+</DIV></TD></TR>
+        <TR>
+          <TD id=3DSenha class=3DtdSenha height=3D28 vAlign=3Dtop>
+            <DIV align=3Dright><INPUT onblur=3Ddesliga(this.name); =
+class=3DtxtLogin1=20
+            onfocus=3Dliga(this.name); maxLength=3D10 type=3Dpassword =
+name=3DtxtSenha>=20
+            </DIV></TD></TR>
+        <TR>
+          <TD id=3DEmpresa class=3DtdEmpresa height=3D28 vAlign=3Dtop>
+            <DIV align=3Dright><INPUT onblur=3Ddesliga(this.name); =
+class=3DtxtEmpresa=20
+            onfocus=3Dliga(this.name); maxLength=3D7 name=3DtxtEmpresa> =
+<IMG=20
+            onmouseout=3Dhideddrivetip();=20
+            onmousedown=3D"ddrivetip('Abre um nova janela pra escolher a =
+filial', 300);"=20
+            onclick=3D"janOS('AjudaFilial.php',200,500);"=20
+            src=3D"http://www.crpaaa.com.br/FigurasNF/btEdit.jpg" =
+width=3D16=20
+            height=3D16></DIV></TD></TR>
+        <TR>
+          <TD id=3DBanco class=3DtdBanco height=3D28 vAlign=3Dtop>
+            <DIV align=3Dright><INPUT onblur=3Ddesliga(this.name); =
+class=3DtxtLogin1=20
+            onfocus=3Dliga(this.name); value=3DCRPAAA maxLength=3D10 =
+name=3DtxtBanco>=20
+            </DIV></TD></TR>
+        <TR>
+          <TD height=3D37>
+            <DIV align=3Dcenter><A=20
+            =
+onmouseover=3D"MM_swapImage('ImgBotao','','../FigurasNF/btEntar2.jpg',1)"=
+=20
+            onmouseout=3DMM_swapImgRestore()=20
+            href=3D"javascript:document.frmLogin.submit();"><IMG =
+border=3D0=20
+            name=3DImgBotao =
+src=3D"http://www.crpaaa.com.br/FigurasNF/btEntar1.jpg"=20
+            width=3D111 height=3D29></A></DIV></TD></TR></TBODY></TABLE>
+      <DIV align=3Dleft></DIV></TD></TR>
+  <TR>
+    <TD =
+colSpan=3D2>&nbsp;</TD></TR></TBODY></TABLE></DIV></FORM></BODY></HTML>
+
+------=_NextPart_000_0000_01CC30BC.31CC28B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.crpaaa.com.br/FigurasNF/btEdit.jpg
+
+/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAQABADASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2CPVZ
+ZkS5jmuGdlD+QluXiXIB2llQsDgjnPvjHy1k6p43utP1SztDp6LGWWS9lxKfIgJ27iGROSemM/dP
+HSs+68y20670S/0XVLlHIBktbZnU4RAGVh3BXI7jjoeKwRBq93ol5ZS6TrFxq2o7VmupbMxoxDps
+yTgKoVT+JJ7141Kvilo4u9+3/AO/2dGzk2v6/r8j/9k=
+
+------=_NextPart_000_0000_01CC30BC.31CC28B0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.crpaaa.com.br/FigurasNF/btEntar1.jpg
+
+/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAdAG8DASIA
+AhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABAUGBwgDAQn/xAA8EAABAwMCAgYGBwgDAAAAAAAB
+AgMEBQYRAAcSIRMxQVFhgQgUMnHR0hUiI0JScoQWQ2KDobLC4nWV4f/EABsBAAEFAQEAAAAAAAAA
+AAAAAAYAAQMEBQIH/8QANREAAQIEAwUECAcAAAAAAAAAAQIRAAMEIQUxQRJTktLhEzNRYQYUIjJD
+UpHRQmJxgaGx0//aAAwDAQACEQMRAD8A236SvpORdlWGKPSo6Krds1HGzGXktx0EkBbgHMkkHCRg
+nBORyzjq6t0L3uGSZV335PhOOfWTTYLqk8IPUOjbISnz56Avq55Fe3N3Fu2UelmRZi2owcGejy4W
+m+R/ChIGqoLzkl1brq1OOLJUpajkk95OhKdUz6yoXKlr2EIsSGclnYO4FiLsc7M0eD45jc6omFSi
+Skk7KXISwJDqYgkkg6sIsZF6xUnH7QXSvx9ZAH92iG71j9ldujzlD5tV0316e2vDaqFxUuK+njYf
+lNNuJzjKSoAjPuOrMuiJ+Mv69ICziE1SgkITf9fvExavRkEEVy5T75I+bT2Hdy144KzXD+eT/wC6
+mvpE7bUixY0+PR9tZVGhMSm22rkXVHXm3gRnhDSsgZPLOfu68R6N9VgsrbTX6NIqqYIqLdKbeV6w
+6zwhRIBTjPXyJ54PZq2rDy3fL4ukEcuRXyapdOEJUUs7BQzf5tknIswIOjwjjXRKVjhq1V85B+Om
+TFyVA44apUD+Z9Xx07otg0h/Y+Tci5sVNXRUA2nLi+JKOE/YlPs8SscYPd29miKhtJU6PLokNEyF
+NqFWDa48OOs9IlC05ClggcI6xnwPZqA0Ct8vi6QSS01ISlWyCCAbedhrnCxi4KsccNTl+b6vjpjH
+rtaOMVF/zfX8dSRWzb7NPqkqNX6TUfotlbktuK6pSmyn7vVzzz59XI6Hesh+mWpArr86IlqakliN
+xHpl4UUnAx2dZPiNN6grer4ukagRUI95Oj/tl4+MCR6zcBxw1BR97znx0zj1a5eRExCvDpnNLYfZ
+p3E7NIUJ3y/r0i1LmKMOqFunX7bkN+uuvtMk44nV9MyfA59nV/2jdse64HSoAbkIx0jWc47iD2g6
+z+yy3IZLTqA42sYUlQyCNONm6g7RbjlwApTjMZam05OSW1J4gnyI13KmzqWeiTNXtpW4BLOCA7Fm
+BBDsWGV3eCGjqFoUATYxmb0jtvHNpt4K4ubHcNqXSpyQ1IQkkIUtXEsD+JCyTj8JB1SdUtGdSftU
+I9dgq5ty4/121Dxx1HwOvrbetjUPcSgP0a4ac1Uqe7zLbo5pV2KSoc0qGesEHWTb+9DViwuOo21e
+U+BCcUcQ5EcPEdvtBSQfNPnqGow+dLnGopSL5g5HzfQ6Pe2kBGN+jM0KVMlJ2pbkhiApL3IYsFJe
+4uCP7xq2DnTu3JyKXXadNdSpTUeQ28sIGVEJUCcePLV3p2zrR9q6G1nvVS28/wB2uyNsaueu5Gv+
+sb+bToViA+EnjPJAEcGIIUCq35U/6Qu3u3EsbcWTPq9Efu1FYmSEOqiVIsiChIGDwpSoqB5DHnqT
+0/eWjq3di3T6tP8Ao5ulCCWujR0vGI3RZxx44eLn19XZ2aAZ2wqpUM3G0R/xqPm02j7WziPrV5B/
+QJH+WrSpuIN3KOM8kEEiVUqqFVDkEkKPspF0uQe8PiXhLS7vhtbWyrbLb5nPVZE5LgSOiCA2UkE5
+znJ7seOpjK3RYG4FAuOnRnVJp0SPHWzIASVlCOBYGCcAgnB/prgztXJOM1pJ/Rgf5aNa2pc5Zq4P
+6UfNqHtMQ3SeM8kb8iTPQkAE2bROjkfi84kUK9rHolLuJujQ6yJdYiOM5ldGUMFXUgYOSnJPM5PI
+eOklZuSNWLdtuAyh1L1NYcbdKwAlRUviHDg93fjXVrafOM1TP6f/AG0W1tKg9dSJ/k/7aXaYhuUc
+Z5I1dictOyzBmsANX+bxhNE7NOohHLnoxnaOP2zyf5Z+bRzG0EJRAVLUodxSr5tMF4huU8Z5Iml0
+yxof4+8LXrgjwAG2z61LPJEdrmonx7hqxtkbRkJkP1SaniWpSnHFY5FahjhHgBpnZ2ydKhIRIdfL
+qD+7abDefeckn+mrRixWYMdDEdtLLKBhKEDAGp5FJOVNFRVEOMgMg+Zc3J87W0zgio6NQIXMsBH/
+2Q==
+
+------=_NextPart_000_0000_01CC30BC.31CC28B0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.crpaaa.com.br/estilo.css
+
+TEXTAREA.txtADsSolicit {
+	BORDER-BOTTOM: #00923f 1px solid; BORDER-LEFT: #00923f 1px solid; =
+TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ffffff; FONT-STYLE: =
+normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: =
+35px; COLOR: #006600; FONT-SIZE: 9px; BORDER-TOP: #00923f 1px solid; =
+BORDER-RIGHT: #00923f 1px solid
+}
+INPUT.txtLogin1 {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; TEXT-TRANSFORM: uppercase; =
+FONT-STYLE: normal; WIDTH: 128px; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; HEIGHT: 18px; FONT-SIZE: 13px; BORDER-TOP: 0px; =
+FONT-WEIGHT: bold; BORDER-RIGHT: 0px
+}
+INPUT.txtEmpresa {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; TEXT-TRANSFORM: uppercase; =
+FONT-STYLE: normal; WIDTH: 110px; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; HEIGHT: 18px; FONT-SIZE: 13px; BORDER-TOP: 0px; =
+FONT-WEIGHT: bold; BORDER-RIGHT: 0px
+}
+INPUT.txtCampoPesq {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; TEXT-TRANSFORM: uppercase; =
+BACKGROUND-COLOR: #cbe4cb; FONT-STYLE: normal; WIDTH: 200px; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 16px; =
+FONT-SIZE: 9px; BORDER-TOP: 0px; FONT-WEIGHT: bold; BORDER-RIGHT: 0px
+}
+INPUT.txtCampoOS {
+	BORDER-BOTTOM: #00923f 1px solid; BORDER-LEFT: #00923f 1px solid; =
+TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ffffff; FONT-STYLE: =
+normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: =
+17px; COLOR: #006600; FONT-SIZE: 10px; BORDER-TOP: #00923f 1px solid; =
+BORDER-RIGHT: #00923f 1px solid
+}
+INPUT.TXT {
+	BORDER-BOTTOM: #00923f 1px solid; BORDER-LEFT: #00923f 1px solid; =
+TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ffffff; FONT-STYLE: =
+normal; WIDTH: 70px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; =
+HEIGHT: 16px; COLOR: #006600; FONT-SIZE: 9px; BORDER-TOP: #00923f 1px =
+solid; BORDER-RIGHT: #00923f 1px solid
+}
+INPUT.TXT2 {
+	BORDER-BOTTOM: #00923f 1px solid; BORDER-LEFT: #00923f 1px solid; =
+TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #ffffff; FONT-STYLE: =
+normal; WIDTH: 250px; FONT-FAMILY: Verdana, Arial, Helvetica, =
+sans-serif; HEIGHT: 16px; COLOR: #006600; FONT-SIZE: 9px; BORDER-TOP: =
+#00923f 1px solid; BORDER-RIGHT: #00923f 1px solid
+}
+SELECT.cmbCampoOS {
+	BORDER-BOTTOM: #00923f 1px solid; BORDER-LEFT: #00923f 1px solid; =
+BACKGROUND-COLOR: #ffffff; FONT-STYLE: normal; WIDTH: 122px; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 16px; COLOR: =
+#006600; FONT-SIZE: 9px; BORDER-TOP: #00923f 1px solid; BORDER-RIGHT: =
+#00923f 1px solid
+}
+SELECT.cmbCampo {
+	BORDER-BOTTOM: #009900 0px; BORDER-LEFT: #009900 0px; TEXT-TRANSFORM: =
+uppercase; BACKGROUND-COLOR: #cbe4cb; FONT-STYLE: normal; WIDTH: 50px; =
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 16px; =
+FONT-SIZE: 9px; BORDER-TOP: #009900 0px; FONT-WEIGHT: bold; =
+BORDER-RIGHT: #009900 0px
+}
+SELECT.cmbCampo3 {
+	BORDER-BOTTOM: #009900 0px; BORDER-LEFT: #009900 0px; BACKGROUND-COLOR: =
+#cbe4cb; FONT-STYLE: normal; WIDTH: 200px; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; HEIGHT: 16px; FONT-SIZE: 9px; BORDER-TOP: #009900 =
+0px; FONT-WEIGHT: bold; BORDER-RIGHT: #009900 0px
+}
+SELECT.cmbCampo4 {
+	BORDER-BOTTOM: #009900 0px; BORDER-LEFT: #009900 0px; BACKGROUND-COLOR: =
+#cbe4cb; FONT-STYLE: normal; WIDTH: 500px; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; HEIGHT: 16px; FONT-SIZE: 9px; BORDER-TOP: #009900 =
+0px; FONT-WEIGHT: bold; BORDER-RIGHT: #009900 0px
+}
+SELECT.cmbPercurso {
+	BORDER-BOTTOM: #009900 0px; BORDER-LEFT: #009900 0px; BACKGROUND-COLOR: =
+#cbe4cb; FONT-STYLE: normal; WIDTH: 100px; FONT-FAMILY: Verdana, Arial, =
+Helvetica, sans-serif; HEIGHT: 70px; FONT-SIZE: 9px; BORDER-TOP: #009900 =
+0px; FONT-WEIGHT: bold; BORDER-RIGHT: #009900 0px
+}
+TD.tdLogin {
+	BACKGROUND-IMAGE: url(../FigurasNF/txLogin2.jpg); BACKGROUND-REPEAT: =
+no-repeat; BACKGROUND-POSITION: right 50%
+}
+TD.tdSenha {
+	BACKGROUND-IMAGE: url(../FigurasNF/txSenha1.jpg); BACKGROUND-REPEAT: =
+no-repeat; BACKGROUND-POSITION: right 50%
+}
+TD.tdEmpresa {
+	BACKGROUND-IMAGE: url(../FigurasNF/txtEmpresa1.jpg); BACKGROUND-REPEAT: =
+no-repeat; BACKGROUND-POSITION: right 50%
+}
+TD.tdBanco {
+	BACKGROUND-IMAGE: url(../FigurasNF/txtBanco1.jpg); BACKGROUND-REPEAT: =
+no-repeat; BACKGROUND-POSITION: right 50%
+}
+.tdFundo {
+	BACKGROUND-IMAGE: url(../FigurasNF/FundoNF.jpg); BACKGROUND-REPEAT: =
+no-repeat; BACKGROUND-POSITION: center 50%
+}
+.tdCampoPesq {
+	FONT-STYLE: normal; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana, =
+Arial, Helvetica, sans-serif; BACKGROUND-POSITION: right center; COLOR: =
+#ffffff; FONT-SIZE: 7pt; FONT-WEIGHT: bold
+}
+.tdTitFundo {
+	FONT-STYLE: italic; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: =
+"AvantGarde Bk BT"; BACKGROUND-POSITION: left 50%; COLOR: #ffffff; =
+FONT-SIZE: 13pt; FONT-WEIGHT: bold
+}
+.tdTopo {
+	BACKGROUND-IMAGE: url(../FigurasNF/Topo.jpg); BACKGROUND-ATTACHMENT: =
+scroll; BACKGROUND-REPEAT: no-repeat
+}
+TABLE.tblForm {
+	WIDTH: 627px
+}
+.rodape {
+	FONT-STYLE: normal; FONT-FAMILY: arial; COLOR: #006600; FONT-SIZE: 9px; =
+FONT-WEIGHT: bold
+}
+INPUT.TEXT_COD {
+	TEXT-TRANSFORM: uppercase; WIDTH: 45px; FONT-FAMILY: Verdana; =
+BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 18px; COLOR: =
+#006600; FONT-SIZE: 9px
+}
+INPUT.TEXT_DSC {
+	TEXT-TRANSFORM: uppercase; WIDTH: 250px; FONT-FAMILY: Verdana; =
+BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 18px; COLOR: =
+#006600; FONT-SIZE: 9px
+}
+INPUT.TEXT_EMAIL {
+	WIDTH: 200px; FONT-FAMILY: Verdana; BACKGROUND: none transparent scroll =
+repeat 0% 0%; HEIGHT: 18px; COLOR: #006600; FONT-SIZE: 9px
+}
+TR.LinhaTitCad {
+	BACKGROUND-COLOR: #009900; FONT-FAMILY: Verdana, Arial, Helvetica, =
+sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+TD.LinhaIncluir {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #006600; =
+FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+IMG {
+	CURSOR: hand
+}
+.paginacao {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+TD.SolicitanteTit {
+	FONT-STYLE: italic; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; =
+FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+TR.LinhaTitSolic {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; =
+FONT-WEIGHT: bold
+}
+TR.LinhaDadosSolic {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #006600; =
+FONT-SIZE: 9px
+}
+TR.CURSOR {
+	CURSOR: hand
+}
+INPUT.btnAtual {
+	BORDER-BOTTOM: #00923f 1px solid; BORDER-LEFT: #00923f 1px solid; =
+TEXT-TRANSFORM: uppercase; BACKGROUND-COLOR: #049546; FONT-STYLE: =
+normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: =
+17px; COLOR: #ffffff; FONT-SIZE: 10px; BORDER-TOP: #00923f 1px solid; =
+BORDER-RIGHT: #00923f 1px solid
+}
+
+------=_NextPart_000_0000_01CC30BC.31CC28B0--
